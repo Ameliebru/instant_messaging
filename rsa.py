@@ -58,4 +58,4 @@ def key_rsa(t):
         e = random.randint(1, phi)
     _, u, _ = bezout(e, phi)
     d = u % phi
-    return [N, e], [p, q, d]
+    return [N, e], [int(p), int(q), int(d)]

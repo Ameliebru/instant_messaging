@@ -27,15 +27,19 @@ def int_to_str(message):
     return "".join(res)
 
 
-def int_to_hex(int):
-    return hex(int)
-
-def hex_to_int(hex): 
-    return int(hex) 
+def str_to_list(string):
+    string = string.replace(",", " ")
+    string = string.replace("[", " ")
+    string = string.replace("]", " ")
+    string = string.split()
+    L = []
+    for i in string : 
+        L.append(int(i))
+    return L 
 
 def decoupage(message):
     L =  message.split()
     n = L[0]
     e = L[1]
-    return n,e
+    return int(n),int(e)
 
