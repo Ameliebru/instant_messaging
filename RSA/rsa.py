@@ -2,8 +2,6 @@ import math
 from sympy import *
 import random
 
-
-
 def encrypt_rsa(m, pk):
     """Fonction qui chiffre un message avec RSA
 
@@ -30,6 +28,10 @@ def decrypt_rsa(c, sk):
     return pow(c, d, p * q) 
 
 def bezout(a, b):
+    """Int a and b 
+    Return d = a*u + b*v 
+
+    """
     (d, r) = (a, b)
     (u, s) = (1, 0)
     (v, t) = (0, 1)
@@ -42,6 +44,9 @@ def bezout(a, b):
     return d, u,v 
 
 def key_rsa(t):
+    """ t taille de la clé
+    return clé publique et privée""" 
+    
     inf = 2**((t // 2  - 1))
     maxi = 2**(t// 2 +1 ) - 1
     N = 1

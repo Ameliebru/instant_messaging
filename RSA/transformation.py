@@ -37,9 +37,4 @@ def str_to_list(string):
         L.append(int(i))
     return L 
 
-def decoupage(message):
-    L =  message.split()
-    n = L[0]
-    e = L[1]
-    return int(n),int(e)
 
